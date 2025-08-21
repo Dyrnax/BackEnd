@@ -20,3 +20,4 @@ class Direccion(models.Model):
     calle = models.CharField(max_length=50, null=True)
     numero = models.CharField(max_length=10, null=True)
     departamento = models.CharField(max_length=10, null=True)
+
