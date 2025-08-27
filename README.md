@@ -13,3 +13,10 @@ pip install mysqlclient (o)
 python manage.py migrate
 python manage.py makemigrations 
 python manage.py migrate
+python manage.py createsuperuser
+Username (leave blank to use 'informatica'): marco
+Email address: zucar@gmail.com         
+Password: 1234
+Password (again):
+python manage.py runserver ruta: http://127.0.0.1:8000/
+pip install djangorestframework

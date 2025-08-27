@@ -20,7 +20,7 @@ class Direccion(models.Model):
     calle = models.CharField(max_length=50, null=True)
     numero = models.CharField(max_length=10, null=True)
     departamento = models.CharField(max_length=10, null=True)
-    detalles = models.TextField(null=True)
+    detalles = models.TextField(null=True) 
 
 class Biblioteca(models.Model):
     nombre = models.CharField(max_length=100, null=False)
@@ -28,8 +28,8 @@ class Biblioteca(models.Model):
 
 class Lector(models.Model):
     nombre = models.CharField(max_length=60, null=False)
-    rut = models.IntegerField(max_length=8, null=False)
-    digito_verificador = models.CharField(1, null=False)
+    rut = models.IntegerField(null=False)
+    digito_verificador = models.CharField(max_length=1, null=False)
     correo = models.CharField(max_length=50, null=True)
     telefono = models.CharField(max_length=15, null=True)
     direccion = models.ForeignKey(Direccion, on_delete=models.CASCADE)
@@ -40,8 +40,8 @@ class Libro(models.Model):
     genero = models.CharField(max_length=30, null=False)
     titulo = models.CharField(max_length=100, null=False)
     id_autor = models.ForeignKey(Autor, on_delete=models.CASCADE)
-    paginas = models.IntegerField(max_length=5, null=False)
-    copias = models.IntegerField(max_length=4, null=False)
+    paginas = models.IntegerField(null=False)
+    copias = models.IntegerField(null=False)
 
 class Prestamo(models.Model):
     id_libro = models.ForeignKey(Libro, on_delete=models.CASCADE)
