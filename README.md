@@ -10,6 +10,7 @@ pip install django (o)
 django-admin startproject drf (pv)
 django-admin startapp primera_app (pv)
 pip install mysqlclient (o) 
+pip install djangorestframework
 python manage.py migrate
 python manage.py makemigrations 
 python manage.py migrate
@@ -18,6 +19,5 @@ Username (leave blank to use 'informatica'): zucar
 Email address: zucar@zucar.com         
 Password: 1234
 Password (again):
-pip install djangorestframework
 python manage.py runserver ruta: http://127.0.0.1:8000/
                                  http://127.0.0.1:8000/admin
