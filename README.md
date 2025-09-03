@@ -1,4 +1,6 @@
 inicializacion paso a paso desde 0
+(o): obligatorio
+(pv): primera vez
 
 git config --global user.name "Marco Calfileo" (o)
 git config --global user.email marco.calfileo@gmail.com (o)
@@ -10,11 +12,11 @@ pip install django (o)
 django-admin startproject drf (pv)
 django-admin startapp primera_app (pv)
 pip install mysqlclient (o) 
-pip install djangorestframework
-python manage.py migrate
-python manage.py makemigrations 
-python manage.py migrate
-python manage.py createsuperuser
+pip install djangorestframework (o)
+python manage.py migrate (o)
+python manage.py makemigrations (o)
+python manage.py migrate (o)
+python manage.py createsuperuser (o)
 Username (leave blank to use 'informatica'): zucar
 Email address: zucar@zucar.com         
 Password: 1234

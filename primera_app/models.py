@@ -10,6 +10,7 @@ class Autor(models.Model):
     pseudonimo = models.CharField(max_length=50, null=True)
     id_nacionalidad = models.ForeignKey(Nacionalidad, on_delete=models.CASCADE)
     bio = models.TextField()
+    fecha_nacimiento = models.DateField(null=True)
 
 class Comuna(models.Model):
     codigo = models.CharField(max_length=5, null=False)
