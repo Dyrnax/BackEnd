@@ -6,7 +6,7 @@ from .models import Nacionalidad, Autor, Comuna, Direccion, Biblioteca, Lector, 
 # Create your views here.
 
 def pagina_inicio(request):
-    return render(request, 'inicio.html')
+    return render(request, 'primera_app/inicio.html')
 
 class Nacionalidad_ViewSet(viewsets.ModelViewSet):
     queryset = Nacionalidad.objects.all()
