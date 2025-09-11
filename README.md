@@ -16,11 +16,15 @@ pip install djangorestframework (o)
 python manage.py migrate (o)
 python manage.py makemigrations (o)
 python manage.py migrate (o)
+python manage.py loaddata data_tipocategoria.json
+python manage.py loaddata data_categoria.json
+python manage.py loaddata data_nacionalidades.json
+python manage.py loaddata data_comunas.json
 python manage.py createsuperuser (o)
 Username (leave blank to use 'informatica'): zucar
 Email address: zucar@zucar.com         
 Password: 1234
 Password (again):
 python manage.py runserver ruta: http://127.0.0.1:8000/
-                                 http://127.0.0.1:8000/admin
+                                 http://127.0.0.zucar1:8000/admin
                                  http://127.0.0.1:8000/primera_app/
