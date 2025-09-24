@@ -26,5 +26,5 @@ Email address: zucar@zucar.com
 Password: 1234
 Password (again):
 python manage.py runserver ruta: http://127.0.0.1:8000/
-                                 http://127.0.0.zucar1:8000/admin
+                                 http://127.0.0.1:8000/admin
                                  http://127.0.0.1:8000/primera_app/
