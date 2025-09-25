@@ -28,3 +28,15 @@ Password (again):
 python manage.py runserver ruta: http://127.0.0.1:8000/
                                  http://127.0.0.1:8000/admin
                                  http://127.0.0.1:8000/primera_app/
+pip install python-decouple
+
+
+#No trabajo en maquina personal :p
+en ".env"
+SECRET_KEY = 'django-insecure-rc_#uk5gvzmks*#@)$onq1clgm%8hf4m@w8fb9_i8s8%=*=7t#'
+DB_ENGINE = 'django.db.backends.mysql'
+DB NAME = 'bd_backend'
+DE_USER = 'root'
+DB_PASS = ''
+DB_HOST = 'localhost'
+DB_PORT = '3306'
