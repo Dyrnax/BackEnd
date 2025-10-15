@@ -1,10 +1,39 @@
 from django.shortcuts import render
 from rest_framework import viewsets
+
+from django.contrib.auth import logout, login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
 from .serializer import NacionalidadSerializer, AutorSerializer, ComunaSerializer, DireccionSerializer, BibliotecaSerializer, LibroSerializer, TipoCategoriaSerializer, CategoriaSerializer, LectorSerializer, PrestamoSerializer
 from .models import Nacionalidad, Autor, Comuna, Direccion, Biblioteca, Lector, TipoCategoria, Categoria, Libro, Prestamo
 
 # Create your views here.
+def logout_view(request):
+    # Cierra la sesión del usuario y limpia la data de SESSION
+    logout(request)
+    # Redirige a la página de inicio de sesión
+    return redirect('login')
 
+
+def registro(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            messages.success(request, "Registro Exitoso. ¡Bienvenido!")
+            return redirect('/')
+        else:
+            messages.error(
+                request, "No ha sido posible Registrarlo. Por favor revise el formulario por errores.")
+    else:
+        form = UserCreationForm()
+    return render(request, 'registro.html', {'form': form})
+
+@login_required
 def pagina_inicio(request):
     return render(request, 'primera_app/inicio.html')
 

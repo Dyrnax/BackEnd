@@ -13,6 +13,8 @@ django-admin startproject drf (pv)
 django-admin startapp primera_app (pv)
 pip install mysqlclient (o) 
 pip install djangorestframework (o)
+pip install python-decouple
+pip install iconic
 python manage.py migrate (o)
 python manage.py makemigrations (o)
 python manage.py migrate (o)
@@ -28,7 +30,6 @@ Password (again):
 python manage.py runserver ruta: http://127.0.0.1:8000/
                                  http://127.0.0.1:8000/admin
                                  http://127.0.0.1:8000/primera_app/
-pip install python-decouple
 
 
 #No trabajo en maquina personal :p

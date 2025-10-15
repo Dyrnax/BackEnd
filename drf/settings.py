@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = '/' 
 
 # Application definition
 
@@ -41,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'primera_app',
     'rest_framework',
+    'drf_yasg',
+    'iconic',
 ]
 
 MIDDLEWARE = [
