@@ -17,6 +17,7 @@ pip install djangorestframework (o)
 pip install python-decouple
 pip install iconic
 pip install drf_yasg
+pip install rutificador
 python manage.py migrate (o)
 python manage.py makemigrations (o)
 python manage.py migrate (o)
