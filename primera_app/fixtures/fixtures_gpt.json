@@ -1,0 +1,317 @@
+[{
+        "model": "primera_app.Nacionalidad",
+        "pk": 1,
+        "fields": {
+            "pais": "Chile",
+            "nacionalidad": "Chilena",
+            "created_at": "2024-01-01T10:00:00Z",
+            "updated_at": "2024-01-01T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Nacionalidad",
+        "pk": 2,
+        "fields": {
+            "pais": "Colombia",
+            "nacionalidad": "Colombiana",
+            "created_at": "2024-01-01T10:00:00Z",
+            "updated_at": "2024-01-01T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Nacionalidad",
+        "pk": 3,
+        "fields": {
+            "pais": "Argentina",
+            "nacionalidad": "Argentina",
+            "created_at": "2024-01-01T10:00:00Z",
+            "updated_at": "2024-01-01T10:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.Autor",
+        "pk": 1,
+        "fields": {
+            "id_nacionalidad": 1,
+            "nombre": "Isabel Allende",
+            "pseudonimo": "",
+            "biografia": "Autora chilena reconocida por su narrativa mágica y social.",
+            "created_at": "2024-01-02T10:00:00Z",
+            "updated_at": "2024-01-02T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Autor",
+        "pk": 2,
+        "fields": {
+            "id_nacionalidad": 2,
+            "nombre": "Gabriel García Márquez",
+            "pseudonimo": "Gabo",
+            "biografia": "Premio Nobel colombiano, autor de 'Cien años de soledad'.",
+            "created_at": "2024-01-02T11:00:00Z",
+            "updated_at": "2024-01-02T11:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Autor",
+        "pk": 3,
+        "fields": {
+            "id_nacionalidad": 3,
+            "nombre": "Jorge Luis Borges",
+            "pseudonimo": "",
+            "biografia": "Autor argentino, uno de los más destacados de la literatura universal.",
+            "created_at": "2024-01-02T12:00:00Z",
+            "updated_at": "2024-01-02T12:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.Comuna",
+        "pk": 1,
+        "fields": {
+            "codigo_comuna": "13101",
+            "nombre_comuna": "Santiago",
+            "created_at": "2024-01-01T10:00:00Z",
+            "updated_at": "2024-01-01T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Comuna",
+        "pk": 2,
+        "fields": {
+            "codigo_comuna": "13114",
+            "nombre_comuna": "Providencia",
+            "created_at": "2024-01-01T10:00:00Z",
+            "updated_at": "2024-01-01T10:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.Direccion",
+        "pk": 1,
+        "fields": {
+            "id_comuna": 1,
+            "calle": "Av. Libertador Bernardo O'Higgins",
+            "numero": "1234",
+            "departamento": "",
+            "detalles": "Frente a la Plaza de Armas",
+            "created_at": "2024-01-01T10:00:00Z",
+            "updated_at": "2024-01-01T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Direccion",
+        "pk": 2,
+        "fields": {
+            "id_comuna": 2,
+            "calle": "Av. Providencia",
+            "numero": "5678",
+            "departamento": "502",
+            "detalles": "Cerca del Metro Manuel Montt",
+            "created_at": "2024-01-02T10:00:00Z",
+            "updated_at": "2024-01-02T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Direccion",
+        "pk": 3,
+        "fields": {
+            "id_comuna": 2,
+            "calle": "Los Leones",
+            "numero": "3456",
+            "departamento": "",
+            "detalles": "",
+            "created_at": "2024-01-03T10:00:00Z",
+            "updated_at": "2024-01-03T10:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.Biblioteca",
+        "pk": 1,
+        "fields": {
+            "id_direccion": 1,
+            "nombre_biblioteca": "Biblioteca Nacional de Chile",
+            "web": "https://www.bibliotecanacional.cl",
+            "habilitado": true,
+            "created_at": "2024-01-03T10:00:00Z",
+            "updated_at": "2024-01-03T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Biblioteca",
+        "pk": 2,
+        "fields": {
+            "id_direccion": 3,
+            "nombre_biblioteca": "Biblioteca Providencia",
+            "web": "https://www.bibliotecaprovidencia.cl",
+            "habilitado": true,
+            "created_at": "2024-01-04T10:00:00Z",
+            "updated_at": "2024-01-04T10:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.Lector",
+        "pk": 1,
+        "fields": {
+            "id_biblioteca": 1,
+            "id_direccion": 2,
+            "rut_lector": "12.345.678-9",
+            "nombre_lector": "Juan Pérez",
+            "correo_lector": "juan.perez@example.com",
+            "fecha_nacimiento": "1990-05-20",
+            "habilitado": true,
+            "created_at": "2024-01-03T10:00:00Z",
+            "updated_at": "2024-01-03T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Lector",
+        "pk": 2,
+        "fields": {
+            "id_biblioteca": 2,
+            "id_direccion": 3,
+            "rut_lector": "15.987.654-3",
+            "nombre_lector": "María González",
+            "correo_lector": "maria.gonzalez@example.com",
+            "fecha_nacimiento": "1985-07-15",
+            "habilitado": true,
+            "created_at": "2024-01-03T11:00:00Z",
+            "updated_at": "2024-01-03T11:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.TipoCategoria",
+        "pk": 1,
+        "fields": {
+            "tipo_categoria": "Ficción",
+            "habilitado": true,
+            "created_at": "2024-01-01T10:00:00Z",
+            "updated_at": "2024-01-01T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.TipoCategoria",
+        "pk": 2,
+        "fields": {
+            "tipo_categoria": "Ensayo",
+            "habilitado": true,
+            "created_at": "2024-01-01T11:00:00Z",
+            "updated_at": "2024-01-01T11:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.Categoria",
+        "pk": 1,
+        "fields": {
+            "id_tipo_categoria": 1,
+            "categoria": "Realismo mágico",
+            "descripcion": "Narrativas donde lo mágico coexiste con lo cotidiano.",
+            "habilitado": true,
+            "created_at": "2024-01-01T12:00:00Z",
+            "updated_at": "2024-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Categoria",
+        "pk": 2,
+        "fields": {
+            "id_tipo_categoria": 2,
+            "categoria": "Filosofía",
+            "descripcion": "Reflexiones sobre el ser, la realidad y el conocimiento.",
+            "habilitado": true,
+            "created_at": "2024-01-01T13:00:00Z",
+            "updated_at": "2024-01-01T13:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.Libro",
+        "pk": 1,
+        "fields": {
+            "id_biblioteca": 1,
+            "id_categoria": 1,
+            "id_autor": 1,
+            "titulo": "La casa de los espíritus",
+            "paginas": 490,
+            "copias": 5,
+            "ubicacion": "Estante A3",
+            "fisico": true,
+            "habilitado": true,
+            "created_at": "2024-01-05T10:00:00Z",
+            "updated_at": "2024-01-05T10:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Libro",
+        "pk": 2,
+        "fields": {
+            "id_biblioteca": 1,
+            "id_categoria": 1,
+            "id_autor": 2,
+            "titulo": "Cien años de soledad",
+            "paginas": 417,
+            "copias": 3,
+            "ubicacion": "Estante B1",
+            "fisico": true,
+            "habilitado": true,
+            "created_at": "2024-01-05T11:00:00Z",
+            "updated_at": "2024-01-05T11:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Libro",
+        "pk": 3,
+        "fields": {
+            "id_biblioteca": 2,
+            "id_categoria": 2,
+            "id_autor": 3,
+            "titulo": "Ficciones",
+            "paginas": 210,
+            "copias": 4,
+            "ubicacion": "Estante C2",
+            "fisico": true,
+            "habilitado": true,
+            "created_at": "2024-01-05T12:00:00Z",
+            "updated_at": "2024-01-05T12:00:00Z"
+        }
+    },
+
+    {
+        "model": "primera_app.Prestamo",
+        "pk": 1,
+        "fields": {
+            "id_libro": 1,
+            "id_lector": 1,
+            "fecha_prestamo": "2024-02-01T10:00:00Z",
+            "fecha_devolucion": "2024-02-15",
+            "fecha_retorno": "2024-02-14T15:00:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Prestamo",
+        "pk": 2,
+        "fields": {
+            "id_libro": 2,
+            "id_lector": 1,
+            "fecha_prestamo": "2024-03-01T10:00:00Z",
+            "fecha_devolucion": "2024-03-15",
+            "fecha_retorno": "2024-03-13T16:30:00Z"
+        }
+    },
+    {
+        "model": "primera_app.Prestamo",
+        "pk": 3,
+        "fields": {
+            "id_libro": 3,
+            "id_lector": 2,
+            "fecha_prestamo": "2024-04-01T09:00:00Z",
+            "fecha_devolucion": "2024-04-20",
+            "fecha_retorno": "2024-04-18T10:00:00Z"
+        }
+    }
+]

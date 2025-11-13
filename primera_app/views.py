@@ -4,6 +4,7 @@ from django.contrib.auth import logout, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from rest_framework.permissions import IsAuthenticated
+import django_filters 
 
 from rest_framework import viewsets
 from rest_framework.authentication import SessionAuthentication
@@ -44,6 +45,20 @@ def pagina_inicio(request):
     if 'mensaje_bienvenida' in request.session:
         del request.session['mensaje_bienvenida']
     return render(request, 'primera_app/inicio.html', {'message': mensaje_bienvenida})
+
+#Filtro de Libros
+class LibroFilter(django_filters.FilterSet):
+    id_categoria = django_filters.ModelChoiceFilter(queryset=Categoria.objects.all(),label='Categoría')
+    id_autor = django_filters.ModelChoiceFilter(queryset=Autor.objects.all(),label='Autor')
+    class Meta:
+        model = Libro
+        fields = ['id_categoria','id_autor']
+
+#Listado de Libros
+def listado_libros(request):
+    f = LibroFilter(request.GET, queryset=Libro.objects.all())
+    return render(request, 'primera_app/lista_libros.html',
+    {'filter': f})
 
 
 class NacionalidadViewSet(viewsets.ModelViewSet):

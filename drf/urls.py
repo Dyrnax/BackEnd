@@ -37,6 +37,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.pagina_inicio, name='home'),
     path('primera_app/', include ('primera_app.urls')),
+    path('filtro/', views.listado_libros, name='listado_libros'),
 
     # URL's para documentación de API
     path('apidocs/', schema_view.with_ui('swagger',cache_timeout=0), name='schema-swagger-ui'),

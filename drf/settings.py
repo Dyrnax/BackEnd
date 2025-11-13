@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_yasg',
     'iconic',
+    'django_filters',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

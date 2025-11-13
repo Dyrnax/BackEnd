@@ -18,6 +18,8 @@ pip install python-decouple
 pip install iconic
 pip install drf_yasg
 pip install rutificador
+pip install django-filter
+pip install django-widget-tweaks
 python manage.py migrate (o)
 python manage.py makemigrations (o)
 python manage.py migrate (o)
@@ -25,6 +27,7 @@ python manage.py loaddata data_tipocategoria.json
 python manage.py loaddata data_categoria.json
 python manage.py loaddata data_nacionalidades.json
 python manage.py loaddata data_comunas.json
+python manage.py loaddata fixtures_gpt.json
 python manage.py createsuperuser (o)
 Username (leave blank to use 'informatica'): zucar
 Email address: zucar@zucar.com         
